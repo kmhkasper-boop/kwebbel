@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>Kwebbel</title>
+<meta name="description" content="Kwebbel: veilig kletsen en bestanden delen met je vriendjes op hetzelfde wifi. Zonder internet, zonder server, versleuteld.">
+<meta name="theme-color" content="#6C4CF1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Kwebbel">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <!-- eerste keer: instellen -->
+  <section id="setup" class="screen hidden"></section>
+
+  <!-- start -->
+  <section id="home" class="screen hidden">
+    <header class="top">
+      <button class="me-btn" id="meBtn" aria-label="Mijn profiel"></button>
+      <div class="hi"><small>Kwebbel</small><b id="hiName">Hoi!</b></div>
+      <button class="icon-btn" id="helpBtn" aria-label="Hoe werkt het?">?</button>
+      <button class="icon-btn" id="setBtn" aria-label="Instellingen">⚙️</button>
+    </header>
+    <div id="parentNote"></div>
+    <div class="big-actions">
+      <button class="big b-scan" id="scanBtn"><span>📷</span>Scan een code</button>
+      <button class="big b-conn" id="connBtn"><span>🔗</span>Verbinden</button>
+      <button class="big b-add" id="addBtn"><span>➕</span>Vriendje toevoegen</button>
+    </div>
+    <div id="mirrorList"></div>
+    <h2 class="sec-title" id="friendsTitle">Mijn vriendjes</h2>
+    <div id="contactList" class="contacts"></div>
+    <div id="installRow"></div>
+  </section>
+
+  <!-- gesprek -->
+  <section id="chat" class="screen hidden">
+    <header class="top chat-top">
+      <button class="icon-btn back" id="chatBack" aria-label="Terug">←</button>
+      <div class="who" id="chatWho"></div>
+      <button class="icon-btn" id="chatConn" aria-label="Verbinden">🔗</button>
+    </header>
+    <div id="chatNotes"></div>
+    <div id="msgs" class="msgs"></div>
+    <div id="emojiBox" class="emoji-box hidden"></div>
+    <footer class="composer" id="composer">
+      <button class="c-btn" id="emoBtn" aria-label="Emoji">😊</button>
+      <button class="c-btn" id="fileBtn" aria-label="Foto of bestand">📎</button>
+      <textarea id="txt" rows="1" placeholder="Typ een berichtje…" enterkeyhint="send"></textarea>
+      <button class="c-btn mic" id="micBtn" aria-label="Spraakbericht">🎤</button>
+      <button class="c-btn send hidden" id="sendBtn" aria-label="Versturen">➤</button>
+    </footer>
+    <input type="file" id="fileIn" multiple hidden>
+  </section>
+
+  <!-- meelezen (ouder) -->
+  <section id="mirror" class="screen hidden">
+    <header class="top chat-top">
+      <button class="icon-btn back" id="mirBack" aria-label="Terug">←</button>
+      <div class="who" id="mirWho"></div>
+    </header>
+    <div id="mirBody" class="msgs"></div>
+  </section>
+</div>
+<div id="toasts"></div>
+<script src="vendor/qrcode.js"></script>
+<script src="vendor/jsQR.js"></script>
+<script src="js/db.js"></script>
+<script src="js/kcrypto.js"></script>
+<script src="js/link.js"></script>
+<script src="js/media.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

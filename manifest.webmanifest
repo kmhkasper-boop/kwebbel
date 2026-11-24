@@ -1,0 +1,18 @@
+{
+  "name": "Kwebbel",
+  "short_name": "Kwebbel",
+  "description": "Veilig kletsen en bestanden delen met vriendjes op hetzelfde wifi. Zonder internet, zonder server, versleuteld.",
+  "lang": "nl",
+  "start_url": "./",
+  "scope": "./",
+  "id": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8EC",
+  "theme_color": "#6C4CF1",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
