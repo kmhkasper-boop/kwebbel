@@ -38,3 +38,7 @@ Plain HTML/CSS/JS, geen build-stap, geen tracking, geen externe verzoeken.
 - Bibliotheken: `qrcode.js` (Kazuhiko Arase, MIT), `jsQR` (Apache-2.0). Lettertype Nunito (SIL OFL).
 
 Tests: `test-e2e.py` (Playwright): drie losse browsers (Sam, Noor en Mama) koppelen, verbinden, berichten, een bestand van 12 MB (SHA-256 gecontroleerd), een foto, spraak, wachtrij en opnieuw verbinden, de reserve-route, ouderkopieën en vreemde apparaten. Plus WebKit (Safari-motor) ↔ Chromium.
+
+## Handleiding voor ouders
+
+[Kwebbel-handleiding-voor-ouders.pdf](Kwebbel-handleiding-voor-ouders.pdf) (3 pagina's, met plaatjes).
